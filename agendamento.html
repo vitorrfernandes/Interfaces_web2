@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Clínicas Vitor - Agendamento</title>
+
+        <link rel="stylesheet" href="css/global.css" />
+        <link rel="stylesheet" href="css/agendamento.css" />
+
+        <script src="js/agendamento.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Clínicas Vitor</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="agendamento.html">Agendamentos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <form action="javascript:void(0)" onsubmit="agendar()">
+                <select
+                    name="profissional"
+                    id="select-profissional"
+                    required
+                ></select>
+
+                <select name="data" id="select-data" required></select>
+
+                <select name="horario" id="select-horario" required></select>
+
+                <input type="submit" value="Enviar" />
+            </form>
+
+            <div id="agendamentos">
+                <h2>Seus agendamentos</h2>
+
+                <table id="tabela-agendamentos">
+                    <tr>
+                        <th>Profissional</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Preço</th>
+                    </tr>
+                </table>
+
+                <p><b>Total:</b> <span id="total">R$0.00</span></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Clínicas Vitor</p>
+        </footer>
+    </body>
+</html>
